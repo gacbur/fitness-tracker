@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.navbar{
+    background-color: $main-blue;
+    padding:0em 2em;
+    display: flex;
+    align-items: center;
+
+    &__logo{
+        color:white;
+        outline:1px solid red;
+
+        a{
+            width:170px;
+            color:white;
+            outline: 1px solid violet;
+            display: block;
+            padding:1em 1em;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+
+    &__button{
+        display: flex;
+        width: 100%;
+
+        button{
+            background-color: $main-blue;
+            border: none;
+            color:white;
+            margin-left: auto;
+            cursor: pointer;
+            display: flex;
+            padding:.15em .2em;
+            font-size: 39px;
+        }
+    }
+}
