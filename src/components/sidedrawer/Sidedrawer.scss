@@ -15,6 +15,80 @@
     visibility: hidden;
     box-shadow: 0 2px 13px rgba(0,0,0,.7);
 
+    &__accordion{
+        margin-top: 2em;
+    }
+
+    &__header{
+        cursor: pointer;
+        padding:.7em 0em;
+        text-align: center;
+        transition: .25s;
+
+        &:hover{
+            background-color: lightgray;
+            transition: .25s;
+        }
+
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon{
+                display: flex;
+                margin-left:.4em;
+                transition: .20s;
+                font-size: 14px;
+            }
+
+            .icon.rotate{
+                transform: rotate(-180deg);
+                transition: .20s;
+            }
+        }
+    }
+
+    &__expandable-links{
+        max-height: 0px;
+        overflow-y: hidden;
+        transition: max-height 0.2s linear;
+    }
+
+    &__expandable-links.show{
+        max-height: 200px;
+    }
+
+
+    ul{
+        margin-top:4em;
+
+        a:first-child{
+            border-top: 1px solid lightgray;
+        }
+
+        a{
+            text-decoration: none;
+            color:black;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+            border-bottom:1px solid lightgray;
+            transition: .15s;
+
+            &:hover{
+                background-color: lightgray;
+                transition: .15s;
+            }
+
+            li{
+                list-style-type: none;
+                padding:.7em 0em;
+
+            }
+        }  
+    }
+
    button{
         margin-left: auto;
         background-color: white;

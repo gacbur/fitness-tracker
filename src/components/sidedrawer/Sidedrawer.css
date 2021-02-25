@@ -17,6 +17,94 @@
           box-shadow: 0 2px 13px rgba(0, 0, 0, 0.7);
 }
 
+.sidedrawer__accordion {
+  margin-top: 2em;
+}
+
+.sidedrawer__header {
+  cursor: pointer;
+  padding: .7em 0em;
+  text-align: center;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.sidedrawer__header:hover {
+  background-color: lightgray;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.sidedrawer__header span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidedrawer__header span .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: .4em;
+  -webkit-transition: .20s;
+  transition: .20s;
+  font-size: 14px;
+}
+
+.sidedrawer__header span .icon.rotate {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: .20s;
+  transition: .20s;
+}
+
+.sidedrawer__expandable-links {
+  max-height: 0px;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.2s linear;
+  transition: max-height 0.2s linear;
+}
+
+.sidedrawer__expandable-links.show {
+  max-height: 200px;
+}
+
+.sidedrawer ul {
+  margin-top: 4em;
+}
+
+.sidedrawer ul a:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.sidedrawer ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.sidedrawer ul a:hover {
+  background-color: lightgray;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.sidedrawer ul a li {
+  list-style-type: none;
+  padding: .7em 0em;
+}
+
 .sidedrawer button {
   margin-left: auto;
   background-color: white;
