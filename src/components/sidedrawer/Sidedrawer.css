@@ -1,0 +1,51 @@
+.sidedrawer {
+  position: fixed;
+  font-family: "Open Sans", sans-serif;
+  z-index: 1000;
+  background-color: white;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 250px;
+  padding: 1em 0em;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  visibility: hidden;
+  -webkit-box-shadow: 0 2px 13px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 2px 13px rgba(0, 0, 0, 0.7);
+}
+
+.sidedrawer button {
+  margin-left: auto;
+  background-color: white;
+  margin-right: .5em;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: darkgray;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.sidedrawer button :hover {
+  color: black;
+}
+
+.sidedrawer.show {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  width: 250px;
+}
+/*# sourceMappingURL=Sidedrawer.css.map */

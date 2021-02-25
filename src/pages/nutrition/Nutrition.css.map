@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAC,aAAa;CACxB",
+    "sources": [
+        "Nutrition.scss"
+    ],
+    "names": [],
+    "file": "Nutrition.css"
+}

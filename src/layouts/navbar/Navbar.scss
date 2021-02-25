@@ -8,12 +8,10 @@
 
     &__logo{
         color:white;
-        outline:1px solid red;
 
         a{
-            width:170px;
+            width:145px;
             color:white;
-            outline: 1px solid violet;
             display: block;
             padding:1em 1em;
             font-size: 20px;
@@ -32,8 +30,8 @@
             margin-left: auto;
             cursor: pointer;
             display: flex;
-            padding:.15em .2em;
-            font-size: 39px;
+            padding:.15em 0em;
+            font-size: 33px;
         }
     }
 }
