@@ -1,4 +1,48 @@
 .weight {
-  outline: 1px solid red;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15em;
+}
+
+.weight__form {
+  width: 80%;
+  padding: 1em;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weight__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2em;
+  height: 400px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.weight__graph {
+  margin-top: 5em;
+  height: 500px;
+  width: 80%;
 }
 /*# sourceMappingURL=Weight.css.map */

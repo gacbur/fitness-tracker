@@ -23,8 +23,8 @@ const Sidedrawer: FC<siderdrawerProps> = ({ show, hide_menu }) => {
                 <IoIosClose />
             </button>
             <ul>
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/dashboard"><li>Dashboard</li></Link>
+                <Link to="/" onClick={() => hide_menu(false)}><li>Home</li></Link>
+                <Link to="/dashboard" onClick={() => hide_menu(false)}><li>Dashboard</li></Link>
                 <div className="sidedrawer__accordion">
                     <div className="sidedrawer__header"
                         onClick={() => setExpandAccordion(prevState => !prevState)}
