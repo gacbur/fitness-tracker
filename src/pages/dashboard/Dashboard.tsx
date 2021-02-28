@@ -24,7 +24,7 @@ const Dashboard = () => {
                         </Link>
                     </div>
                     <div className="dashboard__items__item">
-                        <h2>Nutrition plan</h2>
+                        <h2>Nutrition</h2>
                         <p> Feb. 23, 2021</p>
                         <p>Energy	699 kcal</p>
                         <p>Protein	32.4 g</p>

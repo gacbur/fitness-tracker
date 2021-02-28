@@ -36,7 +36,7 @@ const Sidedrawer: FC<siderdrawerProps> = ({ show, hide_menu }) => {
 
                     >
                         <Link to="/workouts" onClick={() => hide_menu(false)}><li>workout</li></Link>
-                        <Link to="/nutrition" onClick={() => hide_menu(false)} ><li>nutrition</li></Link>
+                        <Link to="/diet_diary" onClick={() => hide_menu(false)} ><li>diet diary</li></Link>
                         <Link to="/weight" onClick={() => hide_menu(false)}><li>weight</li></Link>
                     </div>
                 </div>

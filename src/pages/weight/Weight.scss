@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15em;
+    margin-bottom: 12em;
 
     &__form{
         width:80%;
@@ -23,9 +23,20 @@
     }
 
     &__graph{
+        display: flex;
+        justify-content: center;
+        min-height: 500px;
+        max-width: 800px;
         margin-top: 5em;
-        height: 500px;
-        width: 80%;
+        height: 400px;
+        width: 95%;
+        max-width: 800px;
     }
     
+    &__no-data{
+        width: 100%;
+        margin-top: 2em;
+        padding: 3em 0em;
+        text-align: center;
+    }
 }

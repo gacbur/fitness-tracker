@@ -1,0 +1,17 @@
+.diet-diary{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12em;
+
+
+    &__form{
+        width:90%;
+        justify-content: center;
+
+        button{
+
+        }
+    }
+}

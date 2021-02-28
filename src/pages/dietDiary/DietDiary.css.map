@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,KAAK,EAAC,IAAI;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,IAAI;CAWtB;;AARI,AAAD,iBAAO,CAAA;EACH,KAAK,EAAC,GAAG;EACT,eAAe,EAAE,MAAM;CAK1B",
+    "sources": [
+        "DietDiary.scss"
+    ],
+    "names": [],
+    "file": "DietDiary.css"
+}
