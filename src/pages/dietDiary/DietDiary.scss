@@ -10,8 +10,21 @@
         width:90%;
         justify-content: center;
 
-        button{
+    }
 
-        }
+    &__table{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6em;
+        height: 400px;
+        width: 95%;
+        max-width: 700px;
+    }
+
+    &__no-data{
+        width: 100%;
+        margin-top: 5em;
+        padding: 3em 0em;
+        text-align: center;
     }
 }

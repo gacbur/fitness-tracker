@@ -6,18 +6,14 @@ import { v4 as uuidv4 } from 'uuid';
 
 //@ts-ignore
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
-
 import Box from '@material-ui/core/Box';
-
 import { Button } from '@material-ui/core'
 import { DataGrid, ColDef } from '@material-ui/data-grid';
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 import { RootStore } from '../../redux/Store'
-
 import { addToWeight, removeFromWeight } from '../../redux/actions/weightActions'
-
 import PageTitle from '../../components/pagetitle/PageTitle'
 
 import "./Weight.css"
@@ -92,7 +88,7 @@ const Weight = () => {
                             value={weightRecord.weight}
                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeWeightInputs(e)}
                             validators={['required', 'weightMaxAndMin']}
-                            errorMessages={['this field is required', 'Weight needs to be between 30 to 500kg.']}
+                            errorMessages={['this field is required']}
                             name="weight"
                             id="standard-basic"
                             type="number"
