@@ -93,6 +93,7 @@ const DietDiary = () => {
             <PageTitle title={'Diet Diary'} />
             <div className="diet-diary">
                 <ValidatorForm
+                    onSubmit={() => handleAddDiaryEntry()}
                     className="diet-diary__form">
                     <Box display="flex" flexDirection={matches ? 'column' : 'row'} justifyContent="center" alignItems="center">
                         <Box >
@@ -128,7 +129,6 @@ const DietDiary = () => {
                     </Box>
                     <Box mt={4} width="100%" display="flex" justifyContent="center">
                         <Button
-                            onClick={() => handleAddDiaryEntry()}
                             variant="contained"
                             color="primary"
                             type="submit"

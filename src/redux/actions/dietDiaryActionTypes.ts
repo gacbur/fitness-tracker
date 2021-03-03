@@ -3,8 +3,8 @@ export const REMOVE_DIARY_ENTRY = "REMOVE_DIARY_ENTRY"
 
 export type DiaryEntry = {
     id: string,
-    name?: string,
     date: string
+    name?: string,
 }
 
 export interface AddNewDiaryEntry {
