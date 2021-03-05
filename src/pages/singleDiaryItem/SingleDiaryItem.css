@@ -33,10 +33,24 @@
 }
 
 .single-diary-item__form {
-  margin-top: 8em;
+  margin: 1em 0em;
   width: 90%;
   max-width: 900px;
-  outline: 1px solid red;
   padding: 1em;
+}
+
+.single-diary-item__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2em;
+  margin-bottom: 10em;
+  height: 400px;
+  width: 95%;
+  max-width: 700px;
 }
 /*# sourceMappingURL=SingleDiaryItem.css.map */
