@@ -1,25 +1,32 @@
-import { ADD_TO_WEIGHT, REMOVE_FROM_WEIGHT, weightRecord, WeightDispatchTypes } from '../actions/weightActionTypes'
+import { ADD_TO_WEIGHT, REMOVE_FROM_WEIGHT, WeightRecord, WeightDispatchTypes } from '../actions/weightActionTypes'
 
 interface InitialStateI {
-    weight_records: weightRecord[]
+    weightRecords: WeightRecord[],
+    weightRecordsSorted: WeightRecord[]
 }
 
 const initialState: InitialStateI = {
-    weight_records: []
+    weightRecords: [],
+    weightRecordsSorted: []
 }
 
 const weightReducer = (state: InitialStateI = initialState, action: WeightDispatchTypes): InitialStateI => {
     switch (action.type) {
         case ADD_TO_WEIGHT:
-            const temp_weight_records1 = [...state.weight_records, action.payload].sort((a, b) => a.date.localeCompare(b.date))
-            return {
-                weight_records: temp_weight_records1
-            }
-        case REMOVE_FROM_WEIGHT:
-            const temp_weight_records2 = state.weight_records.filter(item => !action.payload.includes(item.id))
+            const weight_records = [action.payload, ...state.weightRecords,]
+            const weight_records_sorted = [action.payload, ...state.weightRecords,].sort((a, b) => a.date.localeCompare(b.date))
 
             return {
-                weight_records: temp_weight_records2
+                weightRecords: weight_records,
+                weightRecordsSorted: weight_records_sorted
+            }
+        case REMOVE_FROM_WEIGHT:
+            const weight_records_remove = state.weightRecords.filter(item => !action.payload.includes(item.id))
+            const weight_records_sorted_remove = state.weightRecords.filter(item => !action.payload.includes(item.id))
+
+            return {
+                weightRecords: weight_records_remove,
+                weightRecordsSorted: weight_records_sorted_remove
             }
         default:
             return state

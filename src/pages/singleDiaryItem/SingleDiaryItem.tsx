@@ -16,7 +16,7 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import { IoMdAdd } from 'react-icons/io'
 
 import './SingleDiaryItem.css'
-import '../../components/pieChartSingleDiaryItem/PieChartSingleDiaryItem.css'
+import '../../components/singleDiaryItemTotals/SingleDiaryItemTotals.css'
 
 import { RootStore } from '../../redux/Store'
 
@@ -25,7 +25,7 @@ import { addNewMeal, removeMeal } from '../../redux/actions/dietDiaryActions'
 
 import PageTitle from '../../components/pagetitle/PageTitle'
 
-import PieChartSingleDiaryItem from '../../components/pieChartSingleDiaryItem/PieChartSingleDiaryItem'
+import SingleDiaryItemTotals from '../../components/singleDiaryItemTotals/SingleDiaryItemTotals'
 
 type SingleRecipeParams = {
     id: string
@@ -36,7 +36,6 @@ type SingleRecipeProps = RouteComponentProps<SingleRecipeParams>
 const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
 
     const id = match.params.id
-    const toid = match.params.id
 
     const dispatch = useDispatch()
 
@@ -102,7 +101,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
         const { name, time, kcal, protein, carbs, fat } = diaryMealValues
         const meal = { id: uuidv4(), name, time, kcal, protein, carbs, fat }
 
-        dispatch(addNewMeal(toid, meal))
+        dispatch(addNewMeal(id, meal))
     }
 
     const handleRemoveMeal = (records: any) => {
@@ -111,7 +110,6 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
     }
 
     const textFieldStyle = { minHeight: "79px" };
-
 
     return (
         <>
@@ -145,7 +143,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                             }}
                                         />
                                     </Box>
-                                    <Box>
+                                    <Box mt={1}>
                                         <TextValidator style={textFieldStyle}
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.time}
@@ -160,7 +158,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                                 shrink: true,
                                             }} />
                                     </Box>
-                                    <Box>
+                                    <Box mt={2}>
                                         <TextValidator style={textFieldStyle}
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.kcal}
@@ -249,7 +247,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                         {
                                             deleteBtnActive ?
                                                 <Button
-                                                    onClick={() => handleRemoveMeal(setSelectedMeals)}
+                                                    onClick={() => handleRemoveMeal(selectedMeals)}
                                                     variant="contained"
                                                     color="secondary"
                                                 >
@@ -261,7 +259,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                     </Box>
                                 </div>
                                 <div className="single-diary-item__pie-chart">
-                                    <PieChartSingleDiaryItem mealsData={singleDiaryItem.meals} />
+                                    <SingleDiaryItemTotals mealsData={singleDiaryItem.meals} />
                                 </div>
                             </>
                             :

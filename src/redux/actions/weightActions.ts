@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux'
-import { WeightDispatchTypes, ADD_TO_WEIGHT, REMOVE_FROM_WEIGHT, weightRecord } from './weightActionTypes'
+import { WeightDispatchTypes, ADD_TO_WEIGHT, REMOVE_FROM_WEIGHT, WeightRecord } from './weightActionTypes'
 
-export const addToWeight = (weight_record: weightRecord) => (dispatch: Dispatch<WeightDispatchTypes>, getState: any) => {
+export const addToWeight = (weight_record: WeightRecord) => (dispatch: Dispatch<WeightDispatchTypes>, getState: any) => {
     dispatch({
         type: ADD_TO_WEIGHT,
         payload: weight_record

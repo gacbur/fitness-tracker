@@ -88,6 +88,8 @@ const DietDiary = () => {
         setSelectedDiaryEntries([])
     }
 
+    const textFieldStyle = { minHeight: "79px" };
+
     return (
         <>
             <PageTitle title={'Diet Diary'} />
@@ -98,6 +100,7 @@ const DietDiary = () => {
                     <Box display="flex" flexDirection={matches ? 'column' : 'row'} justifyContent="center" alignItems="center">
                         <Box >
                             <TextValidator
+                                style={textFieldStyle}
                                 onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeDiaryInputs(e)}
                                 value={diaryEntry.name}
                                 name="name"
@@ -112,6 +115,7 @@ const DietDiary = () => {
                         </Box>
                         <Box ml={matches ? 0 : 3} mt={matches ? 4 : 0} >
                             <TextValidator
+                                style={textFieldStyle}
                                 onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeDiaryInputs(e)}
                                 value={diaryEntry.date}
                                 validators={['required']}

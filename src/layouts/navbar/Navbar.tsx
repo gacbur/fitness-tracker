@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
             <div className="navbar">
                 <div className="navbar__logo">
-                    <Link to="/">Fitness Tracker</Link>
+                    <Link to="/">Diet Tracker</Link>
                 </div>
                 <div className="navbar__button">
                     <button

@@ -22,7 +22,8 @@ const Weight = () => {
 
     const dispatch = useDispatch()
 
-    const weight_records = useSelector((state: RootStore) => state.weight.weight_records)
+    const weightRecords = useSelector((state: RootStore) => state.weight.weightRecords)
+    const weightRecordsSorted = useSelector((state: RootStore) => state.weight.weightRecordsSorted)
 
     const columns: ColDef[] = [
         { field: 'date', headerName: 'Date', width: 150 },
@@ -120,11 +121,11 @@ const Weight = () => {
                         </Button>
                     </Box>
                 </ValidatorForm>
-                {weight_records.length > 0 ?
+                {weightRecords.length > 0 ?
                     <>
                         <div className="weight__table">
                             <DataGrid
-                                rows={weight_records}
+                                rows={weightRecords}
                                 columns={columns}
                                 pageSize={5}
                                 checkboxSelection
@@ -155,7 +156,7 @@ const Weight = () => {
                                 <LineChart
                                     width={500}
                                     height={300}
-                                    data={weight_records}
+                                    data={weightRecordsSorted}
                                     margin={{
                                         top: 5,
                                         right: 30,

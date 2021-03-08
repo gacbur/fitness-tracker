@@ -1,10 +1,15 @@
 @import '../../variables.scss';
 
 .navbar{
-    background-color: $main-blue;
+    background-color:$main-blue;
     padding:0em 2em;
     display: flex;
     align-items: center;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
 
     &__logo{
         color:white;

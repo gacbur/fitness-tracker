@@ -12,7 +12,7 @@ const dietReducer = (state: InitialStateI = initialState, action: DiaryDispatchT
     switch (action.type) {
         case ADD_NEW_DIARY_ENTRY:
             return {
-                diaryEntries: [...state.diaryEntries, action.payload],
+                diaryEntries: [action.payload, ...state.diaryEntries],
             }
         case REMOVE_DIARY_ENTRY:
             const temp_diary_entries = state.diaryEntries.filter(item => !action.payload.includes(item.id))
@@ -43,6 +43,10 @@ const dietReducer = (state: InitialStateI = initialState, action: DiaryDispatchT
             return {
                 diaryEntries: state.diaryEntries.map(item => {
                     if (item.id === action.payload.diaryItemId) {
+
+                        // console.log(action.payload.id)
+                        // console.log(action.payload.diaryItemId)
+
                         return {
                             ...item,
                             meals: item.meals?.filter(item => !action.payload.id.includes(item.id))

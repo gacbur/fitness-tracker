@@ -7,32 +7,69 @@
     &__items{
         display: flex;
         width: fit-content;
+    }
+
+    &__item{
+        padding:.5em 1em;
+        position: relative;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+        width: 240px;
+        height: 400px;
+        margin:0em 1em;
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            margin-bottom: 1em;
+        }
+    }
+
+    &__new-entry-btn{
+    
+        background-color: $button-main-green;
+        color:white;
+        cursor: pointer;    
+        padding:1em .8em;
+        font-size: 14px;
+        width:90%;
+        border:1px solid lightgray;
+        border-radius: 4px;
+        margin-bottom: auto;
+        position: absolute;
+        bottom:15px;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+        &:hover{
+            background-color: $button-main-green-hover;
+        }
+    }
+}
+
+@media all and(max-width:768px){
+
+    .dashboard{
+        margin-bottom: 5em;
+
+        &__items{
+            flex-direction: column;
+        
+        }
 
         &__item{
-            padding:.5em 1em;
-            position: relative;
-            border: 1px solid lightgray;
-            border-radius: 6px;
-            width: 240px;
-            height: 400px;
-            margin:0em 1em;
-            display: flex;
-            flex-direction: column;
+            padding:1.5em 2em;
+            width: 310px;
+            margin:1em 1em;
 
             h2{
                 margin-bottom: 1em;
             }
 
             button{
-                background-color: $button-main-green;
-                color:white;
-                cursor: pointer;    
-                padding:.5em .4em;
-                width:90%;
-                border:1px solid lightgray;
-                border-radius: 4px;
-                margin-bottom: auto;
-                position: absolute;
+                padding:1.4em 1em;
+                font-size: 18px;
+                width:70%;
                 bottom:15px;
                 left:50%;
                 transform: translate(-50%, -50%);
@@ -42,7 +79,5 @@
                 }
             }
         }
-
-
     }
 }

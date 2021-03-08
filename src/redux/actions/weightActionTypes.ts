@@ -1,7 +1,7 @@
 export const ADD_TO_WEIGHT = "ADD_TO_WEIGHT"
 export const REMOVE_FROM_WEIGHT = "REMOVE_FROM_WEIGHT"
 
-export type weightRecord = {
+export type WeightRecord = {
     id: string,
     weight: number,
     date: string
@@ -9,7 +9,7 @@ export type weightRecord = {
 
 export interface AddToWeight {
     type: typeof ADD_TO_WEIGHT,
-    payload: weightRecord
+    payload: WeightRecord
 }
 
 export interface RemoveFromWeight {
