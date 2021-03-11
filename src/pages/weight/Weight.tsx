@@ -13,7 +13,7 @@ import { DataGrid, ColDef } from '@material-ui/data-grid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 import { RootStore } from '../../redux/Store'
-import { addToWeight, removeFromWeight } from '../../redux/actions/weightActions'
+import { addToWeight, removeFromWeight, getSortedWeightRecords } from '../../redux/actions/weightActions'
 import PageTitle from '../../components/pagetitle/PageTitle'
 
 import "./Weight.css"
@@ -45,6 +45,12 @@ const Weight = () => {
             }
             return true
         })
+    }, [])
+
+    useEffect(() => {
+        if (weightRecordsSorted.length > 0) {
+            dispatch(getSortedWeightRecords())
+        }
     }, [])
 
 

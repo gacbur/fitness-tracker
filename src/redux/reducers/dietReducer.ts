@@ -5,7 +5,7 @@ interface InitialStateI {
 }
 
 const initialState: InitialStateI = {
-    diaryEntries: [],
+    diaryEntries: localStorage.getItem('diaryEntries') ? JSON.parse(localStorage.getItem('diaryEntries') || '{}') : [],
 }
 
 const dietReducer = (state: InitialStateI = initialState, action: DiaryDispatchTypes): InitialStateI => {

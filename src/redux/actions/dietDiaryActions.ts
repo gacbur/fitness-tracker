@@ -6,6 +6,8 @@ export const addNewDiaryEntry = (new_entry: DiaryEntry) => (dispatch: Dispatch<D
         type: ADD_NEW_DIARY_ENTRY,
         payload: new_entry
     })
+
+    localStorage.setItem("diaryEntries", JSON.stringify(getState().diet.diaryEntries));
 }
 
 export const removeDiaryEntry = (diaryEntries: string[]) => (dispatch: Dispatch<DiaryDispatchTypes>, getState: any) => {
@@ -13,6 +15,8 @@ export const removeDiaryEntry = (diaryEntries: string[]) => (dispatch: Dispatch<
         type: REMOVE_DIARY_ENTRY,
         payload: diaryEntries
     })
+
+    localStorage.setItem("diaryEntries", JSON.stringify(getState().diet.diaryEntries));
 }
 
 export const addNewMeal = (diaryItemId: string, meal: Meal) => (dispatch: Dispatch<DiaryDispatchTypes>, getState: any) => {
@@ -23,6 +27,8 @@ export const addNewMeal = (diaryItemId: string, meal: Meal) => (dispatch: Dispat
             diaryItemId
         }
     })
+
+    localStorage.setItem("diaryEntries", JSON.stringify(getState().diet.diaryEntries));
 }
 export const removeMeal = (diaryItemId: string, id: string[]) => (dispatch: Dispatch<DiaryDispatchTypes>, getState: any) => {
     dispatch({
@@ -32,4 +38,6 @@ export const removeMeal = (diaryItemId: string, id: string[]) => (dispatch: Disp
             diaryItemId
         }
     })
+
+    localStorage.setItem("diaryEntries", JSON.stringify(getState().diet.diaryEntries));
 }
