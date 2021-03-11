@@ -143,7 +143,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                             }}
                                         />
                                     </Box>
-                                    <Box mt={1}>
+                                    <Box mt={2}>
                                         <TextValidator style={textFieldStyle}
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.time}
@@ -158,12 +158,12 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                                 shrink: true,
                                             }} />
                                     </Box>
-                                    <Box mt={2}>
+                                    <Box mt={3}>
                                         <TextValidator style={textFieldStyle}
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.kcal}
                                             validators={['required', 'minValue']}
-                                            errorMessages={['this field is required', 'input must be greater than 0']}
+                                            errorMessages={['this field is required', 'kcal must be greater than 0']}
                                             name="kcal"
                                             id="kcal"
                                             label="kcal"
@@ -178,7 +178,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.protein}
                                             validators={['required', 'minValue']}
-                                            errorMessages={['this field is required', 'input must be greater than 0']}
+                                            errorMessages={['this field is required', 'protein must be greater than 0']}
                                             name="protein"
                                             id="protein"
                                             label="protein (in grams)"
@@ -193,7 +193,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.carbs}
                                             validators={['required', 'minValue']}
-                                            errorMessages={['this field is required', 'input must be greater than 0']}
+                                            errorMessages={['this field is required', 'carbs must be greater than 0']}
                                             name="carbs"
                                             id="carbs"
                                             label="carbs (in grams)"
@@ -208,7 +208,7 @@ const SingleDiaryItem: FC<SingleRecipeProps> = ({ match }) => {
                                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeMealValues(e)}
                                             value={diaryMealValues.fat}
                                             validators={['required', 'minValue']}
-                                            errorMessages={['this field is required', 'input must be greater than 0']}
+                                            errorMessages={['this field is required', 'fat must be greater than 0']}
                                             name="fat"
                                             id="fat"
                                             label="fat (in grams)"

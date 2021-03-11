@@ -6,7 +6,7 @@
 .app {
   position: relative;
   min-height: 100vh;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Neue Plak UA", Helvetica, Arial, -apple-system, sans-serif;
 }
 
 .app__wrapper {

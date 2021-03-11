@@ -45,7 +45,6 @@ const Navbar = () => {
                             className={`sidedrawer__expandable-links ${expandAccordion ? 'show' : ''}`}
 
                         >
-                            <Link to="/workouts" onClick={() => setShowSidebar(false)}><li>workout</li></Link>
                             <Link to="/diet_diary" onClick={() => setShowSidebar(false)} ><li>diet diary</li></Link>
                             <Link to="/weight" onClick={() => setShowSidebar(false)}><li>weight</li></Link>
                         </div>

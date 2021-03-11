@@ -76,6 +76,8 @@ const Weight = () => {
         setSelectedRecords([])
     }
 
+    const textFieldStyle = { minHeight: "79px" };
+
 
     return (
         <>
@@ -86,6 +88,7 @@ const Weight = () => {
                     className="weight__form">
                     <Box mt={-4}>
                         <TextValidator
+                            style={textFieldStyle}
                             value={weightRecord.weight}
                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeWeightInputs(e)}
                             validators={['required', 'weightMaxAndMin']}
@@ -96,8 +99,9 @@ const Weight = () => {
                             label="Weight (kg)"
                         />
                     </Box>
-                    <Box mt={5}>
+                    <Box mt={1}>
                         <TextValidator
+                            style={textFieldStyle}
                             value={weightRecord.date}
                             onChange={(e: React.FormEvent<HTMLFormElement>) => handleChangeWeightInputs(e)}
                             name="date"
@@ -111,7 +115,7 @@ const Weight = () => {
                                 shrink: true,
                             }} />
                     </Box>
-                    <Box mt={5}>
+                    <Box mt={2}>
                         <Button
                             variant="contained"
                             color="primary"

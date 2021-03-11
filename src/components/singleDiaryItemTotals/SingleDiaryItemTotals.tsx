@@ -1,13 +1,11 @@
 import React, { FC, useState, useEffect } from 'react'
 
-import { withStyles, Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles, createStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 
 import { PieChart, Pie, Cell } from "recharts";
 
@@ -64,7 +62,9 @@ const SingleDiaryItemTotals: FC<SingleDiaryItemTotalsProps> = ({ mealsData }) =>
         createStyles({
             root: {
                 '&:nth-of-type(odd)': {
-                    backgroundColor: 'lightgray',
+                    backgroundColor: 'white',
+                    border: '1px solid lightgray',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 },
             },
         }),
@@ -147,6 +147,7 @@ const SingleDiaryItemTotals: FC<SingleDiaryItemTotalsProps> = ({ mealsData }) =>
     return (
         <div>
             <div className="pie-chart__totals">
+                <p>Nutrition total:</p>
                 <Table className={classes.table} aria-label="customized table">
                     <TableHead>
                         <TableRow>
@@ -161,7 +162,7 @@ const SingleDiaryItemTotals: FC<SingleDiaryItemTotalsProps> = ({ mealsData }) =>
                             <StyledTableCell align="center">{nutritionTotals.kcalTotal}</StyledTableCell>
                             <StyledTableCell align="center">{nutritionTotals.proteinTotal}</StyledTableCell>
                             <StyledTableCell align="center">{nutritionTotals.carbsTotal}</StyledTableCell>
-                            <StyledTableCell align="center">{nutritionTotals.proteinTotal}</StyledTableCell>
+                            <StyledTableCell align="center">{nutritionTotals.fatTotal}</StyledTableCell>
                         </StyledTableRow>
                     </TableBody>
                 </Table>
