@@ -13,6 +13,10 @@ import undraw_diet_ghvw from '../../svg/undraw_diet_ghvw.svg'
 
 import "./Home.css"
 
+import nutrition from '../../images/nutrition-1.JPG'
+import weight1 from '../../images/weight-1.JPG'
+import weight2 from '../../images/weight-2.JPG'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,14 +68,14 @@ const Home = () => {
                         <h5>Keep track of your weight, that is the best way to stay motivated in the dieting process!</h5>
                     </div>
                     <div className="section2__image">
-                        <img src="/weight-1.jpg" alt="weight-functionality-showcase-1" />
+                        <img src={weight1} alt="weight-functionality-showcase-1" />
                     </div>
                 </div>
             </div>
             <div className="home__section3">
                 <div className="section3__content">
                     <div className="section3__image">
-                        <img src="/weight-2.jpg" alt="weight-functionality-showcase-2" />
+                        <img src={weight2} alt="weight-functionality-showcase-2" />
                     </div>
                     <div className="section3__text">
                         <h2>See your progress</h2>
@@ -82,7 +86,7 @@ const Home = () => {
             <div className="home__section4">
                 <div className="section4__content">
                     <div className="section4__image">
-                        <img src="/nutrition-1.jpg" alt="nutrition-functionality-showcase-1" />
+                        <img src={nutrition} alt="nutrition-functionality-showcase-1" />
                     </div>
                     <div className="section4__text">
                         <h2>Track your meals and nutrition</h2>
