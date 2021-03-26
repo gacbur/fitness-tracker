@@ -78,39 +78,33 @@ const SingleDiaryItemTotals: FC<SingleDiaryItemTotalsProps> = ({ mealsData }) =>
 
     const classes = useStyles();
 
-
-    const handleGetNutritionTotals = () => {
-        const { kcal, protein, carbs, fat } = mealsData.reduce((nutritionTotal: NutritionTotalType, Item: Meal) => {
-            const { kcal, protein, carbs, fat } = Item;
-
-            nutritionTotal.kcal += Number(kcal);
-            nutritionTotal.protein += Number(protein);
-            nutritionTotal.carbs += Number(carbs);
-            nutritionTotal.fat += Number(fat);
-
-            return nutritionTotal
-        },
-            {
-                kcal: 0,
-                protein: 0,
-                carbs: 0,
-                fat: 0,
-            }
-        )
-
-        setNutritionTotals({
-            kcalTotal: kcal,
-            proteinTotal: protein,
-            carbsTotal: carbs,
-            fatTotal: fat,
-        })
-    }
-
     useEffect(() => {
-        handleGetNutritionTotals()
-    }, [])
+        const handleGetNutritionTotals = () => {
+            const { kcal, protein, carbs, fat } = mealsData.reduce((nutritionTotal: NutritionTotalType, Item: Meal) => {
+                const { kcal, protein, carbs, fat } = Item;
 
-    useEffect(() => {
+                nutritionTotal.kcal += Number(kcal);
+                nutritionTotal.protein += Number(protein);
+                nutritionTotal.carbs += Number(carbs);
+                nutritionTotal.fat += Number(fat);
+
+                return nutritionTotal
+            },
+                {
+                    kcal: 0,
+                    protein: 0,
+                    carbs: 0,
+                    fat: 0,
+                }
+            )
+
+            setNutritionTotals({
+                kcalTotal: kcal,
+                proteinTotal: protein,
+                carbsTotal: carbs,
+                fatTotal: fat,
+            })
+        }
         handleGetNutritionTotals()
     }, [mealsData])
 

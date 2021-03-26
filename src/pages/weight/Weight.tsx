@@ -51,7 +51,7 @@ const Weight = () => {
         if (weightRecordsSorted.length > 0) {
             dispatch(getSortedWeightRecords())
         }
-    }, [])
+    }, [weightRecordsSorted.length, dispatch])
 
 
     useEffect(() => {

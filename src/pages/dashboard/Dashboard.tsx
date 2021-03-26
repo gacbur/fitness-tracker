@@ -36,7 +36,7 @@ const Dashboard = () => {
         if (diaryEntries.length > 0) {
             setNutritionLatestEntry(diaryEntries[0])
         }
-    }, [])
+    }, [weightRecords, diaryEntries])
 
     return (
         <>
