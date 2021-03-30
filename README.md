@@ -46,6 +46,8 @@ I've created this app to make dieting process easier and to help visualize the c
 - Sass
 - Redux
 - Material-UI
+- Gsap
+- recharts
 
 ---
 
