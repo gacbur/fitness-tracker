@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Diet tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![diettrackerscreen1](https://user-images.githubusercontent.com/46655309/112970617-ab290180-914e-11eb-8097-bb35d95eb983.JPG)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![diettrackerscreen2](https://user-images.githubusercontent.com/46655309/112970624-ad8b5b80-914e-11eb-8c28-3c61acd4bc3d.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![diettrackerscreen3](https://user-images.githubusercontent.com/46655309/112970633-aebc8880-914e-11eb-82f5-cf24330fd5dc.JPG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![diettrackerscreen4](https://user-images.githubusercontent.com/46655309/112970643-b11ee280-914e-11eb-9f6d-f703eb6fb4a7.JPG)
+
+
+
+
+
+
+---
+
+
+## Description
+
+Diet tracker is here to help you keep track of your diet endeavors, save your weight measurements to see how your weight changes week by week and month by month, this could really motivate you to keep going. Save your meals, calories, carbs, protein and fat to keep track of your eating and how is your calories intake for a specific day, that way it will be easier for you to know if you're sticking to your diet regime.
+
+#### My intentions
+
+I've created this app to make dieting process easier and to help visualize the changes that are going on in the body by tracking weight.
+
+#### Tools
+
+- Typescript
+- Sass
+- Redux
+- Material-UI
+
+---
+
+## How To Use
+
+
+#### Installation
+
+1. git clone (github repo link)
+2. npm install 
+
